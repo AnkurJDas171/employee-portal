@@ -29,20 +29,29 @@ const Header = React.memo(({ changeMenuState }: { changeMenuState: any }): JSX.E
     return (
         <header className="header h-auto">
             <div className="flex justify-between">
-                <img
-                    src={menu}
-                    alt="menu logo"
-                    className="h-14 my-12"
+                <div
+                    className="cursor-pointer"
                     onClick={() => {
                         changeMenuState((prevState: boolean): boolean => !prevState);
                     }}
-                />
+                >
+                    <img
+                        src={menu}
+                        alt="menu logo"
+                        className="h-14 my-12"
+
+                    />
+                </div>
                 <Navbar items={tempItems} />
-                <img
-                    src={profile}
-                    alt="menu logo"
-                    className="h-14 my-12"
-                />
+                <div
+                    className="cursor-pointer"
+                >
+                    <img
+                        src={profile}
+                        alt="menu logo"
+                        className="h-14 my-12"
+                    />
+                </div>
             </div>
         </header>
     )

@@ -14,13 +14,13 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import TimeTracker from './pages/TimeTracker';
 import Task from './pages/Task';
+import Profile from './components/ui/Profile';
 
 function App() {
   const [tempMenuVisibleState, setTempMenuVisibleState] = useState<boolean>(false)
 
-
   return (
-    <main className='h-screen'>
+    <main className='h-screen font-urbanistRegular'>
       <div className='main-container h-full bg-slate-100'>
         {/* <React.Suspense fallback={<Home />}> */}
         <Header changeMenuState={setTempMenuVisibleState} />
@@ -36,6 +36,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Menu isMenuVisible={tempMenuVisibleState} changeMenuState={setTempMenuVisibleState} />
+        <Profile />
         {/* </React.Suspense> */}
       </div>
     </main>

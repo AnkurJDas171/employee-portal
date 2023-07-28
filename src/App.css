@@ -3,11 +3,18 @@ section {
 }
 
 .main-container {
-    border-top-left-radius: 100px;
     background-clip: content-box;
-    padding: 0 10%;
+    /* padding: 0 10%; */
 }
 
 .header {
     padding: 0 5% ;
+}
+
+img {
+    pointer-events: none;
+}
+
+#draggable-image {
+    pointer-events: inherit;
 }
